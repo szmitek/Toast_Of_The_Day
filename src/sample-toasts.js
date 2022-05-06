@@ -59,7 +59,7 @@ const toasts = {
         image: "/images/fruit.png",
         desc: "Toast served with a lot of natural vitamins ",
         price: 700,
-        status: "available"
+        status: "unavailable"
     },
 
     toast8: {
