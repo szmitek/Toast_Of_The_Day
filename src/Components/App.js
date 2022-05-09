@@ -39,6 +39,13 @@ class App extends React.Component {
         toasts[`toast${Date.now()}`] = toast; //add new toast to toasts variable
         this.setState({ toasts }) //set new toasts object to state
     }
+    updateToast = (key, updatedToast) => {
+        const toasts = { ...this.state.toasts} //take a copy of current state
+        toasts[key] = updatedToast //update that state
+        this.setState({toasts})//set that state
+
+    }
+
     loadSampleToasts = () => {
         this.setState({ toasts: sampleToasts })
     }
