@@ -14,7 +14,7 @@ class Order extends React.Component {
         const count = this.props.order[key];
         const isAvailable = toast && toast.status === "available";
         const transitionOptions = {
-            classname: "order",
+            classNames: "order",
             key,
             timeout: {enter: 500, exit: 500}
         };
