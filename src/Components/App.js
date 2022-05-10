@@ -6,6 +6,7 @@ import sampleToasts from "../sample-toasts";
 import Toast from "./Toast";
 import PropTypes from "prop-types";
 import base from "../base";
+import toasts from "../sample-toasts";
 
 class App extends React.Component {
     state = {
@@ -15,6 +16,7 @@ class App extends React.Component {
     static propTypes = {
         match: PropTypes.object
     };
+
     componentDidMount() {
         const {params} = this.props.match
         const localStorageRef = localStorage.getItem(params.storeId)
@@ -26,6 +28,7 @@ class App extends React.Component {
             state: 'toasts'
         })
     }
+
     componentWillUnmount() {
         base.removeBinding(this.ref);
     }
@@ -35,24 +38,35 @@ class App extends React.Component {
     }
 
     addToast = (toast) => {
-        const toasts = { ...this.state.toasts } //take a copy of existing state
+        const toasts = {...this.state.toasts} //take a copy of existing state
         toasts[`toast${Date.now()}`] = toast; //add new toast to toasts variable
-        this.setState({ toasts }) //set new toasts object to state
+        this.setState({toasts}) //set new toasts object to state
     }
     updateToast = (key, updatedToast) => {
-        const toasts = { ...this.state.toasts} //take a copy of current state
+        const toasts = {...this.state.toasts} //take a copy of current state
         toasts[key] = updatedToast //update that state
         this.setState({toasts})//set that state
+    }
+    deleteToast = (key) => {
+        const toasts = {...this.state.toasts} //take a copy of state
+        toasts[key] = null; //update the state
+        this.setState({toasts}) //update state
 
     }
 
     loadSampleToasts = () => {
-        this.setState({ toasts: sampleToasts })
+        this.setState({toasts: sampleToasts})
     }
     addToOrder = (key) => {
-        const order = { ...this.state.order }; //take a copy of state
+        const order = {...this.state.order}; //take a copy of state
         order[key] = order[key] + 1 || 1; // add to order or update amount
-        this.setState({ order });
+        this.setState({order});
+    }
+
+    removeFromOrder = (key) => {
+        const order = {...this.state.order}
+        delete order[key]
+        this.setState({order});
     }
 
     render() {
@@ -62,8 +76,8 @@ class App extends React.Component {
                     <Header tagline="Toast market"></Header>
                     <ul className="toasts">
                         {Object.keys(this.state.toasts).map(key => (
-                            <Toast key={key} index={key} details={this.state.toasts[key]} addToOrder={this.addToOrder} />
-                                ))}
+                            <Toast key={key} index={key} details={this.state.toasts[key]} addToOrder={this.addToOrder}/>
+                        ))}
                     </ul>
                 </div>
                 <Order
