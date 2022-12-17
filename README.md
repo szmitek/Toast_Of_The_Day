@@ -3,7 +3,7 @@ First you get a random name of your restaurant
 
 ![image](https://user-images.githubusercontent.com/61392709/208266723-7b712b3e-8828-40b6-ba91-965f5ad3293a.png)
 
-Later you are going to your shop where you have you have to login to get access to your shop 
+Later you are going to your shop where you have to login to get access to your shop 
 
 ![image](https://user-images.githubusercontent.com/61392709/208266728-3a1546a8-cd76-4748-946c-60b2f36f85f7.png)
 
