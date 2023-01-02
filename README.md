@@ -1,20 +1,29 @@
-![obraz_2022-12-17_223711158-removebg-preview](https://user-images.githubusercontent.com/61392709/208266835-8ebdc4d2-50f7-4d63-8aec-8c84cc2c35ad.png)
+# Toast_Of_The_Day
+A fun and lighthearted project that allows you to browse and order delicious toasts.
+
+## Requirements
+* Node.js
+* npm (comes with Node.js)
+* React
+* Firebase
+## Setup
+1. Clone the repository to your local system
+2. Navigate to the root directory of the project
+3. Run npm install to install all required dependencies
+4. Set up a Firebase project and enable email/password authentication and the Firebase Realtime Database.
+6. Run the program: npm start
+## Usage
+Upon launching the program, you will be prompted to sign in with your email and password. If you do not have an account, you can create one by clicking the "Sign Up" button.
+
+Once you are signed in, you will be presented with a menu of toasts. You can browse the available toasts by clicking on them in the menu on the left side of the screen.
+
+To add a toast to your order, click on the toast in the menu. The toast will be added to the order summary on the right side of the screen.
+
+You can load a sample set of toasts by clicking the "Load Sample Toasts" button at the bottom of the menu. You can also add your own toasts to the menu by entering the toast details in the "Add Toast" form at the bottom of the menu and clicking the "Add Toast" button. Your custom toasts will be stored in the Firebase Realtime Database and will be available to all users of the app.
 
 
-Single Page React app based on wesbos course React for begginers with Realtime Database and authentication on Firebase 
-First you get a random name of your restaurant
-
-![image](https://user-images.githubusercontent.com/61392709/208266723-7b712b3e-8828-40b6-ba91-965f5ad3293a.png)
-
-Later you are going to your shop where you have to login to get access to your shop 
-
-![image](https://user-images.githubusercontent.com/61392709/208266728-3a1546a8-cd76-4748-946c-60b2f36f85f7.png)
-
-And after logging in, you receive all the elements of the restaurant such as the menu, the order and, of course, your available products
+### Application preview: 
 
 ![image](https://user-images.githubusercontent.com/61392709/208266713-6b033d4e-52d4-45ae-9778-b5bfda3c9e2b.png)
 
-Everything is saved and processed in the database 
-
-![image](https://user-images.githubusercontent.com/61392709/208266707-6804d3e8-dce6-47fc-a028-c0a69f0bff6d.png)
 
